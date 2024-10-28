@@ -7,6 +7,11 @@ const authMiddleware = require('./middleware/authMiddleware');
 // Configuración del puerto
 const PORT = process.env.PORT || 3000;
 
+const corsOptions = {
+  origin: 'http://localhost:8100', // Cambia esto por el dominio de tu frontend
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 // Middleware
 app.use(express.json());
 
