@@ -1,8 +1,10 @@
 // app.js
 const express = require('express');
 const app = express();
+
 const authController = require('./controllers/authController');
 const authMiddleware = require('./middleware/authMiddleware');
+const cors = require('cors');
 
 // Configuración del puerto
 const PORT = process.env.PORT || 3000;
